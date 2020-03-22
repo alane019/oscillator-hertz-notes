@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hertz Notes</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body contenteditable="false">
+<!-- ugly html with inline styling... -->  
+
+
+<div id="bodyWrapper">
+    <div id="topHeader"> This demo uses standard, out-of-the box web browser functionality only (vanilla js)</div>
+  
+<div id="mainPane"class="basePane pane">
+  <div class="innerPane  pane" >
+        <p style="cursor: auto;
+        border-color: rgb(85, 85, 85) !important;
+        background-color: rgba(0, 0, 0, 0) !important; user-select: text !important;">
+        </p> &nbsp;&nbsp;
+        <div id="pgnNameWrapper" style="margin-left:17px;">
+            <span class="data-name">
+            current demo: 
+            </span>  &nbsp; 
+            <span id="pgName" class="dataContent""> 
+           
+            </span>
+        <div>
+    </div>
+    <br/> <br/>
+    <button class="w3-btn" id="runButton" onclick="hzNoteTest()"> Run Hertz Note Test </button>
+</div> <div id="paneWrapperLower" style="margin-left:17px;"><span class="data-name"></span>
+<p> &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp;
+     &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp;</p>
+</span> <button class="w3-btn" id="stopButton">Stop audio loop </button>
+<p>&nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp;
+     &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp;</p>
+</div> </div></div> <!-- End of lower pane content wrapper-->
+
+<!-- End out pane of top title panel div.-->
+
+ <!-- DISPLAY Div panel -->
+ <div class="resultDiv basePane pane"> <span><div class="stdDiv innerPane  pane"> <span>Results </span>
+    <div id="results" class="resultDisplayArea"> <span> audio synthesizer results will display here</span>&nbsp;</div></span> </div> <!-- End DISPLAY base pane-->
+
+
+ <!-- Normal Div panel -->
+ <div class="stdDiv basePane pane"> <div class="stdDiv innerPane  pane"><p><br></p>
+    <div class="editableArea" contenteditable="true"> <span>Notes - </span> &nbsp; &nbsp; &nbsp;  <p>  &nbsp; &nbsp; <br></p> <p><br></p> &nbsp;   <p><br></p>
+    </div><!-- end editableDiv --><p><br></p></div>  </div> <!-- End standard base pane-->
+<!-- Normal Div panel -->
+    <div class="stdDiv basePane pane"> <div class="stdDiv innerPane  pane"><p><br></p>
+        <div class="editableArea" contenteditable="true"> <p>  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <br></p> <p><br>
+        </p> &nbsp;   <p><br></p> </div><!-- end editableDiv -->
+        <p><br></p></div>  </div> <!-- End standard base pane-->
+<!-- Normal Div panel -->
+<!-- Normal Div panel -->
+<div class="stdDiv basePane pane"> <div class="stdDiv innerPane  pane"><p><br></p>
+    <div class="editableArea" contenteditable="true"> &nbsp; &nbsp; &nbsp;  <p>  &nbsp; &nbsp; <br></p> <p><br>
+    </p> &nbsp;   <p><br></p> </div><!-- end editableDiv -->
+    <p><br></p></div>  </div> <!-- End standard base pane-->
+<!-- Normal Div panel -->
+<div class="stdDiv basePane pane"> <div class="stdDiv innerPane  pane"><p><br></p>
+    <div class="editableArea" contenteditable="true"> &nbsp; &nbsp; &nbsp;  <p>  &nbsp; &nbsp;  <br></p> <p><br>
+    </p> &nbsp;   <p><br></p> </div><!-- end editableDiv -->
+    <p><br></p></div>  </div> <!-- End standard base pane-->
+
+
+</div>
+<div> Powered by <a href="http://vanilla-js.com" target="_blank">Vanilla JavaScript</a> and your web browser</div>
+<script src="page-view-update.js"></script>
+<script src="hz0.js"></script>
+
+
+</body></html>
