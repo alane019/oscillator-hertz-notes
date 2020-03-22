@@ -3,12 +3,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hertz Notes</title>
-    <link rel="stylesheet" href="w3.css">
+     <link rel="stylesheet" href="w3.css">  
     <link rel="stylesheet" href="style.css">
+
     
 </head>
 <body contenteditable="false">
+
+    <!-- <button class="trigger">Click here to trigger the modal!</button> 
+     <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1>Hello, I am a modal!</h1>
+        </div>
+    </div>   --> 
+
+
+
+
 <!-- ugly html with inline styling... -->  
+<!-- MODAL            -->
+<div class="modal"> <!--  (had class "fade-in"  >> Had ID " id="myModal" ") ...   -  - -- - - - -  - -- - - - -  - -- - - - -  - -- - - - -  -->
+    <!-- Modal content  -->
+        <div class="modal-content">
+            <span class="close-button">×</span>
+                <h3>Warning</h3>
+                <p>This may be loud. Adjust volume as needed.</p> 
+                <h5>Continue? </h5>
+                <div id="btnbox"> 
+                    <button id="yesbtn" class="testInitTrigger">Yes</button>
+                    <button id="nobtn">No</button>
+                </div> 
+        </div> <!-- end modal content --> 	
+</div>
+<!-- MODAL- - -- - - - -  - -- - - - -  - -- - - - -  - - - -- - - - - - - - - -  - -- - - - -  - -- - - - -    -->
 
 <div id="bodyWrapper">
     <div id="topHeader"> This demo uses standard, out-of-the box web browser functionality only (vanilla js)</div>
@@ -29,7 +57,7 @@
         <div>
     </div>
     <br/> <br/>
-    <button class="w3-btn" id="runButton" onclick="hzNoteTest()"> Run Hertz Note Test </button>
+    <button class="w3-btn trigger" id="runButton"> Run Hertz Note Test </button>
 </div> <div id="paneWrapperLower" style="margin-left:17px;"><span class="data-name"></span>
 <p> &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp;
      &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp; &nbsp;-&nbsp;</p>
@@ -42,7 +70,8 @@
 
  <!-- DISPLAY Div panel -->
  <div class="resultDiv basePane pane"> <span><div class="stdDiv innerPane  pane"> <span>Results </span>
-    <div id="results" class="resultDisplayArea"> <span> audio synthesizer results will display here</span>&nbsp;</div></span> </div> <!-- End DISPLAY base pane-->
+ <div>   <textarea id="results" class="resultDisplayArea"> audio synthesizer results will display here &nbsp;</textarea>
+ </div> </span> </div> <!-- End DISPLAY base pane-->
 
 
  <!-- Normal Div panel -->
@@ -68,9 +97,21 @@
 
 
 </div>
+
+
+
+
+
 <div> Powered by <a href="http://vanilla-js.com" target="_blank">Vanilla JavaScript</a> and your web browser</div>
-<script src="page-view-update.js"></script>
+
+
+<script>
+   console.log("abc");
+	               
+
+     
+</script>
+
 <script src="hz0.js"></script>
-
-
+<script src="page-view-update.js"></script>  
 </body></html>

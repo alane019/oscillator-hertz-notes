@@ -24,7 +24,7 @@ let hzNoteTest = function () {
         u = a.createGain()
         v.connect(u)
         v.frequency.value = x
-        v.type = "sawtooth"
+        v.type = "square"
         u.connect(a.destination)
         u.gain.value = w * 0.01
         v.start(a.currentTime)
@@ -35,9 +35,10 @@ let hzNoteTest = function () {
      // SYNTH-PLAY FUNCTIONS
     let playNote = function (note) {
        noteVal = eval(note);
-        k(100, noteVal, 202); console.log("noteVal: " + noteVal);
-        resultText = '<p> Frequency:' + ( ' ' + nn[q] + ' ')  + 'hz</p>'; //eval??????
-        console.log(resultText);
+        k(1, noteVal, 202); console.log("noteVal: " + noteVal);
+        /* [Layered mode] k(1, (noteVal - 100), 202);  k(1, (noteVal - 200), 202);  */
+        resultText = ' Frequency:' + ( ' ' + nn[q] + ' ')  + 'hz   ' + ('\n'); //eval??????
+        console.log(resultText); 
         results.insertAdjacentHTML('afterbegin', resultText);
     }
 
