@@ -103,12 +103,14 @@ html {
         margin-top: 4px;
         margin: 9px;
         min-height: 81px;
-        max-height: 100px;
+        height: 200px;
         font-family: monospace;
         font-stretch: wider;
         letter-spacing: .3px;
         width: 98%;
         min-width: 98%;
+       /* resize: none; */
+
         
         }
 
@@ -127,9 +129,16 @@ html {
           
           /* modal style adjustments */
            .modal button {
-             background-color: gray;
-             color: black;
+             background-color: rgba(143, 173, 88, 0.849);
+             color: black; 
+           
+             opacity: 99%;
            }
+           .modal-content {
+            color: rgb(29, 6, 6);
+            font-weight: 8;
+            font-size: 150%;
+        }
           
 
 

@@ -1,9 +1,32 @@
 //this is the function that runs when the "Hertz Note Test" button is pressed. 
 let hzNoteTest = function () {
+    
     document.getElementById("stopButton").disabled = false;
-
-    let results = document.getElementById("results");
+    
     let resultText = " - - - ";
+
+    let vanillaJsDateTimeObject = new Date;
+        // "June 01, 2019, 2 AM"
+  /*  vanillaJsDateTimeObject.toLocaleDateString('en-US', {
+        month: 'long',
+        day: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+       timeZone: 'America/New_York' 
+        }); */
+    
+  
+    let results = document.getElementById("results");
+   if(results.innerHTML == "audio synthesizer results will display here"){
+    results.innerHTML = ""
+   } 
+
+   resultText = ' [ Starting new osc-hertz-note test:  ' +   vanillaJsDateTimeObject  + ' ]' + ('\n'); //eval??????
+   console.log(resultText); 
+   results.insertAdjacentHTML('afterbegin', resultText);
+
+
+   
   
     //declare hertz Notes object
     let jsonStr1 = '{"c0":16.35,"csDb0":17.32,"d0":18.35,"dsEb0":19.45,"e0":20.6,"f0":21.83,"fsGb0":23.12,"g0":24.5,"gsAb0":25.96,"a0":27.5,"asBb0":29.14,"b0":30.87,"c1":32.7,"csDb1":34.65,"d1":36.71,"dsEb1":38.89,"e1":41.2,"f1":43.65,"fsGb1":46.25,"g1":49,"gsAb1":51.91,"a1":55,"asBb1":58.27,"b1":61.74,"c2":65.41,"csDb2":69.3,"d2":73.42,"dsEb2":77.78,"e2":82.41,"f2":87.31,"fsGb2":92.5,"g2":98,"gsAb2":103.83,"a2":110,"asBb2":116.54,"b2":123.47,"c3":130.81,"csDb3":138.59,"d3":146.83,"dsEb3":155.56,"e3":164.81,"f3":174.61,"fsGb3":185,"g3":196,"gsAb3":207.65,"a3":220,"asBb3":233.08,"b3":246.94,"c4":261.63,"csDb4":277.18,"d4":293.66,"dsEb4":311.13,"e4":329.63,"f4":349.23,"fsGb4":369.99,"g4":392,"gsAb4":415.3,"a4":440,"asBb4":466.16,"b4":493.88,"c5":523.25,"csDb5":554.37,"d5":587.33,"dsEb5":622.25,"e5":659.26,"f5":698.46,"fsGb5":739.99,"g5":783.99,"gsAb5":830.61,"a5":880,"asBb5":932.33,"b5":987.77,"c6":1046.5,"csDb6":1108.73,"d6":1174.66,"dsEb6":1244.51,"e6":1318.51,"f6":1396.91,"fsGb6":1479.98,"g6":1567.98,"gsAb6":1661.22,"a6":1760,"asBb6":1864.66,"b6":1975.53,"c7":2093,"csDb7":2217.46,"d7":2349.32,"dsEb7":2489.02,"e7":2637.02,"f7":2793.83,"fsGb7":2959.96,"g7":3135.96,"gsAb7":3322.44,"a7":3520,"asBb7":3729.31,"b7":3951.07,"c8":4186.01,"csDb8":4434.92,"d8":4698.64,"dsEb8":4978.03}';
@@ -17,6 +40,7 @@ let hzNoteTest = function () {
    console.log(freqNote);
     
     // gain, frequency, duration
+    // See MDN "Web Audio API" https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
     a = new AudioContext()
     function k(w, x, y) {
         console.log(w + x + y)
