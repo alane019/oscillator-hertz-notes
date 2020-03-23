@@ -96,12 +96,18 @@ html {
         text-shadow: black 0px 5px 10px;
     }
 
+    #resultWrapper{
+      overflow: hidden;
+      margin-top: 18px;
+    }
+
     .resultDisplayArea {
         color:rgba(169, 216, 59, 0.699);
         border: .2 dotted rgba(220, 220, 220, 0.404); 
-        background-color: rgba(24, 23, 23, 0.705); padding: 4.8px;
-        margin-top: 4px;
-        margin: 9px;
+        background-color: rgba(24, 23, 23, 0.705); 
+        
+        margin: 8px;
+        padding-top: 5px;
         min-height: 81px;
         height: 200px;
         font-family: monospace;
@@ -110,19 +116,57 @@ html {
         width: 98%;
         min-width: 98%;
        /* resize: none; */
-
+       overflow-y: scroll;
+       font-size: 110%
         
         }
 
-        .resultDisplayArea span{
-            color:rgba(157, 190, 78, 0.623);
+       /* .resultDisplayArea span{
+            color:rgb(192, 27, 141);
+            font-weight: bold;
+            font-size: 125%;
             font-style: italic;
+            } */
+
+             /* 
+            #resultHeader{
+              display: flexbox;
             }
+        .resultColHeader {
+              display: inline;
+            } */
+            
+            .colLeft{
+              position: relative !important;
+              left: 5% !important;
+              display: inline-flex;
+            }
+            .colRight{
+              position: relative !important;
+              left: 38% !important;
+              display: inline-flex;
+            }
+
+            #rightColHeader {
+              left: 30.5% !important;
+            }
+      
+      
+      
 
           .resultDiv span{
             opacity: .5;
+           
           }
 
+        /*  #results * {
+            margin: 2px  !important;
+            margin-bottom: 5px  !important;
+            padding: 2px  !important;
+          } */
+          hr{
+            border-color: rgba(200,200,200,.2) !important;
+          }
           #topHeader{
               font-size: 85%;
           }
@@ -131,7 +175,6 @@ html {
            .modal button {
              background-color: rgba(143, 173, 88, 0.849);
              color: black; 
-           
              opacity: 99%;
            }
            .modal-content {
