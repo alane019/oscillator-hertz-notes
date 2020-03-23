@@ -64,14 +64,17 @@ let freqNoteHTML = JSON.parse(jsonStr3);
 
        // .includes(word)
          if(!(' ' + nn[q]).includes(".")){ 
-            resultText = '<span class="colLeft">' + ( ' ' + nn[q])  + '.00 hz </span> ' + '<span class="colRight"> ' + (freqNoteHTML[note]) + ' </span> ' + '<br> <hr> <br>';    
+            resultText = '<div class="colLeft">' + ( ' ' + nn[q])  + '.00 hz </div> ' + '<div class="colRight"> ' + (freqNoteHTML[note]) + ' </div> ' + '<br> <hr> <br>';   
+            console.log(resultText); 
+            results.insertAdjacentHTML('afterbegin', resultText); 
          }
          else{
-            resultText = '<span class="colLeft">' + ( ' ' + nn[q])  + ' hz </span> ' + '<span class="colRight"> ' + (freqNoteHTML[note]) + ' </span> ' + '<br> <hr> <br>';
+            resultText = '<div class="colLeft">' + ( ' ' + nn[q])  + ' hz </div> ' + '<div class="colRight"> ' + (freqNoteHTML[note]) + ' </div> ' + '<br> <hr> <br>';
+            console.log(resultText); 
+            results.insertAdjacentHTML('afterbegin', resultText);
          }
         
-        console.log(resultText); 
-        results.insertAdjacentHTML('afterbegin', resultText);
+       
     }
 
  
