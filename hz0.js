@@ -6,7 +6,7 @@ let hzNoteTest = function () {
     let resultText = " - - - ";
 
     let vanillaJsDateTimeObject = new Date;
-        // "June 01, 2019, 2 AM"
+        // 
    vanillaJsDateTimeObject.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric', hour: '2-digit', timeZone: 'America/New_York'}); 
     
   
@@ -15,7 +15,7 @@ let hzNoteTest = function () {
     results.innerHTML = ""
    } 
 
-   resultText = '<span> [ Starting new osc-hertz-note test:  ' +   vanillaJsDateTimeObject  + ' ] </span> <br>'; //eval??????
+   resultText = '<span> [ Starting new osc-hertz-note test:  ' +   vanillaJsDateTimeObject  + ' ] </span> <br>'; //
    console.log(resultText); 
    results.insertAdjacentHTML('afterbegin', resultText);
 
@@ -96,9 +96,9 @@ let freqNoteHTML = JSON.parse(jsonStr3);
        
          // result print was here - - - 
         if(qdir == 1  && q < 100) { q++;}
-        if(qdir == 1  && q >= 100) { qdir = 2;} // 2 means down
+        if(qdir == 1  && q >= 100) { qdir = 2;} // 2 represents the state of the loop, note values decreasing. 
         if(qdir == 2  && q > 0) { q--;}
-        if(qdir == 2  && q <= 0) { qdir = 1;} // 2 means up
+        if(qdir == 2  && q <= 0) { qdir = 1;} // 1 represents the state of the loop, note values increasing. 
         playNote(nn[q]);
 
     }, 50);
